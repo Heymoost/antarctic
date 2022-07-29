@@ -1,0 +1,268 @@
+.booking {
+  display: grid;
+
+  @media (min-width: $vp-1440) {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    padding: 0;
+    background-image: url("../img/desktop/background-request-desktop.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 555px;
+  }
+
+  @media (min-width: $vp-768) {
+    grid-template-columns: 100%;
+    padding: 88px 170px 100px 170px;
+    background-image: url("../img/tablet/background-request-tablet.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 805px;
+  }
+
+  @media (min-width: $vp-320) {
+    grid-template-columns: 100%;
+    padding: 60px 15px 65px 15px;
+    background-image: url("../img/mobile/background-request-mobile.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 760px;
+  }
+}
+
+.booking h2 {
+  margin: 0;
+  color: #011c40;
+  font-weight: 700;
+  font-family: "Montserrat", "Arial", sans-serif;
+
+  @media (min-width: $vp-1440) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: start;
+    padding: 213px 0 30px 163px;
+    font-size: 40px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-768) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: center;
+    padding: 0 0 5px 0;
+    font-size: 34px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-320) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: center;
+    padding: 0 0 15px 0;
+    font-size: 24px;
+    line-height: 130%;
+  }
+}
+
+.booking p {
+  margin: 0;
+  color: #011c40;
+  font-weight: 400;
+  font-family: "Montserrat", "Arial", sans-serif;
+
+  @media (min-width: $vp-1440) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: start;
+    padding: 2px 150px 200px 163px;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-768) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: center;
+    padding: 0 40px 0 40px;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-320) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: center;
+    padding: 0 20px 30px 20px;
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.booking form {
+  display: grid;
+  justify-content: center;
+  background: #011c40;
+  background-clip: content-box;
+
+  @media (min-width: $vp-1440) {
+    grid-template-rows: auto;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    padding: 50px 163px 54px 117px;
+  }
+
+  @media (min-width: $vp-768) {
+    grid-template-rows: auto;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    padding: 52px 12px 0 13px;
+  }
+
+  @media (min-width: $vp-320) {
+    grid-template-rows: auto;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    padding: 0;
+  }
+}
+
+.booking form h3 {
+  margin: 0;
+  color: #f9fbfd;
+  font-weight: 500;
+  font-family: "Montserrat", "Arial", sans-serif;
+
+  @media (min-width: $vp-1440) {
+    text-align: start;
+    padding: 45px 50px 26px 50px;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-768) {
+    text-align: start;
+    padding: 45px 50px 26px 50px;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-320) {
+    text-align: center;
+    padding: 35px 0 28px 0;
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+
+.booking form label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.booking form input {
+  height: 43px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "Montserrat", "Arial", sans-serif;
+  border: none;
+
+  @media (min-width: $vp-1440) {
+    padding: 0 120px 0 15px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 0 120px 0 15px;
+  }
+
+  @media (min-width: $vp-320) {
+    padding: 0 48px 0 14px;
+  }
+}
+
+.booking form span {
+  color: #f9fbfd;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+}
+
+.booking .control-checkbox {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #f9fbfd;
+  cursor: pointer;
+
+  @media (min-width: $vp-1440) {
+    top: 0;
+    left: 50px;
+  }
+
+  @media (min-width: $vp-768) {
+    top: 0;
+    left: 50px;
+  }
+
+  @media (min-width: $vp-320) {
+    top: 1px;
+    left: 31px;
+  }
+}
+
+.booking input[type="checkbox"]:checked + .control-checkbox::before {
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 7px;
+  height: 11px;
+  border: 1px solid #101a56;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  content: "";
+}
+
+.booking .control-label {
+  height: 18px;
+
+  @media (min-width: $vp-1440) {
+    padding-top: 2px;
+    padding-left: 20px;
+    letter-spacing: 0.6px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 2px 0 0 20px;
+    letter-spacing: 0.6px;
+  }
+
+  @media (min-width: $vp-320) {
+    text-align: start;
+    padding: 0 80px 0 58px;
+    letter-spacing: 0.6px;
+  }
+}
+
+.booking button {
+  color: #011c40;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "Montserrat", "Arial", sans-serif;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $vp-1440) {
+    padding: 11px 0 11px 0;
+    margin: 10px 50px 50px 50px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 11px 0 11px 0;
+    margin: 10px 50px 50px 50px;
+  }
+
+  @media (min-width: $vp-320) {
+    padding: 11px 0 11px 0;
+    margin: 12px 30px 40px 30px;
+  }
+}

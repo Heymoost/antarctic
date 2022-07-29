@@ -1,0 +1,216 @@
+.cruises {
+  @media (min-width: $vp-1440) {
+    padding: 110px 118px 120px 118px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 90px 0 100px 0;
+  }
+
+  @media (min-width: $vp-320) {
+    padding: 58px 0 65px 0;
+  }
+}
+
+.cruises h2 {
+  text-align: center;
+  color: #011c40;
+  margin: 0;
+  font-weight: 600;
+  font-family: "Montserrat", "Arial", sans-serif;
+
+  @media (min-width: $vp-1440) {
+    padding-bottom: 49px;
+    font-size: 28px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-768) {
+    padding-bottom: 49px;
+    font-size: 26px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-320) {
+    padding-bottom: 29px;
+    font-size: 24px;
+    line-height: 150%;
+  }
+}
+
+.cruises ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+
+  @media (min-width: $vp-1440) {
+    display: grid;
+    grid-template-columns: 260px 260px 260px 260px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-columns: 309px 309px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: center;
+  }
+
+  @media (min-width: $vp-320) {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: center;
+  }
+}
+
+.cruises li {
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.cruises img {
+  display: block;
+  position: relative;
+
+  @media (min-width: $vp-1440) {
+    width: 260px;
+    height: 386px;
+  }
+
+  @media (min-width: $vp-768) {
+    width: 309px;
+    height: 386px;
+  }
+
+  @media (min-width: $vp-320) {
+    width: 270px;
+    height: 386px;
+  }
+}
+
+.cruises h3 {
+  color: #f9fbfd;
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Montserrat", "Arial", sans-serif;
+
+  @media (min-width: $vp-1440) {
+    position: absolute;
+    bottom: 22px;
+    left: 30px;
+  }
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    bottom: 27px;
+    left: 35px;
+  }
+
+  @media (min-width: $vp-320) {
+    position: absolute;
+    bottom: 18px;
+    left: 25px;
+  }
+}
+
+.cruises div {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #011c40;
+
+  @media (min-width: $vp-1440) {
+    padding: 68px 25px 0 25px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 68px 35px 0 35px;
+  }
+
+  @media (min-width: $vp-320) {
+    padding: 68px 25px 0 25px;
+  }
+}
+
+.cruises div:hover h3 {
+  @media (min-width: $vp-1440) {
+    top: 30px;
+    left: 25px;
+  }
+
+  @media (min-width: $vp-768) {
+    top: 30px;
+    left: 35px;
+  }
+
+  @media (min-width: $vp-320) {
+    top: 30px;
+    left: 25px;
+  }
+}
+
+.cruises h4 {
+  padding-bottom: 2px;
+  color: #f9fbfd;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.cruises p {
+  padding-bottom: 12px;
+  color: #d8d8d9;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.cruises button {
+  position: absolute;
+  bottom: 25px;
+  color: #011c40;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "Montserrat", "Arial", sans-serif;
+  border: none;
+  background-color: #f9fbfd;
+  cursor: pointer;
+  z-index: 10;
+
+  @media (min-width: $vp-1440) {
+    padding: 9px 47px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 9px 62px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $vp-320) {
+    padding: 9px 52px;
+    margin-bottom: 11px;
+  }
+}
+
+.cruises div:hover {
+  opacity: 1;
+}

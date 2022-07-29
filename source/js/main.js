@@ -1,6 +1,12 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import smoothscroll from 'smoothscroll-polyfill';
 
+import './modules/menu.js';
+import './modules/validation.js';
+import './modules/smooth-scroll.js';
+
+smoothscroll.polyfill();
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
