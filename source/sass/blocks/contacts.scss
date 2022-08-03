@@ -1,10 +1,13 @@
 .contacts {
   align-items: center;
 
-  @media (min-width: $vp-1440) {
+
+  @media (min-width: $vp-1024) {
     display: flex;
     justify-content: space-between;
-    padding: 120px 103px;
+    padding: 120px 0;
+    max-width: 1160px;
+    margin: 0 auto;
   }
 
   @media (min-width: $vp-768) {
@@ -22,7 +25,7 @@
 .contacts iframe {
   border: none;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     position: static;
     padding-right: 0;
     margin: 0;
@@ -48,7 +51,7 @@
 }
 
 .contacts div {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     max-width: 500px;
   }
 
@@ -69,7 +72,7 @@
   line-height: 150%;
   font-family: "Montserrat", "Arial", sans-serif;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding-bottom: 30px;
   }
 
@@ -90,7 +93,7 @@
   line-height: 150%;
   font-family: "Montserrat", "Arial", sans-serif;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     align-items: center;
     padding-bottom: 20px;
   }
@@ -119,7 +122,7 @@
   line-height: 150%;
   font-family: "Montserrat", "Arial", sans-serif;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding-bottom: 10px;
   }
 

@@ -58,3 +58,15 @@ document.addEventListener('click', function (e) {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+document.addEventListener('click', function (e) {
+  const target = e.target;
+  const itsТavMobile = target === navMobile || navMobile.contains(target);
+  const itsТavToggleClosed = target === navToggleClosed;
+  const wrapperActive = wrapper.classList.contains('wrapper--opened');
+
+  if (!itsТavMobile && !itsТavToggleClosed && wrapperActive) {
+    wrapper.classList.add('wrapper--closed');
+    wrapper.classList.remove('wrapper--opened');
+  }
+});

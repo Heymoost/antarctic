@@ -2,11 +2,11 @@
   background: #011c40;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     min-height: 650px;
     background-image: url("../img/desktop/antarctic-desktop.webp");
     background-repeat: no-repeat;
-    background-size: 100% 659px;
+    background-size: 100% 658px;
   }
 
   @media (min-width: $vp-768) {
@@ -27,10 +27,12 @@
 .main-nav__container {
   display: flex;
   justify-content: space-between;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .main-nav--opened .main-nav__container {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: flex;
   }
 
@@ -44,7 +46,7 @@
 }
 
 .main-nav--opened div {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: block;
   }
 
@@ -58,10 +60,10 @@
 }
 
 .main-nav img {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     width: 70px;
     height: 38px;
-    padding: 35px 0 0 103px;
+    padding: 35px 0 0 0;
   }
 
   @media (min-width: $vp-768) {
@@ -77,13 +79,13 @@
   }
 }
 
-.main-nav__list {
+.main-nav__container-list {
   list-style-type: none;
   margin: 0;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: flex;
-    padding: 42px 70px 0 0;
+    padding: 42px 0 0 0;
   }
 
   @media (min-width: $vp-768) {
@@ -96,20 +98,20 @@
   }
 }
 
-.main-nav__item-link {
+.main-nav__container a {
   color: #f9fbfd;
   margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
 
-  @media (min-width: $vp-1440) {
-    margin-right: 33px;
+  @media (min-width: $vp-1024) {
+    margin-left: 33px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
   }
 
   @media (min-width: $vp-768) {
-    margin-right: 23px;
+    margin-left: 23px;
     font-size: 14px;
     line-height: 17px;
     font-weight: 500;
@@ -122,8 +124,8 @@
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
 
-  @media (min-width: $vp-1440) {
-    padding: 195px 0 0 198px;
+  @media (min-width: $vp-1024) {
+    padding: 195px 0 0 95px;
     font-size: 54px;
     line-height: 66px;
     text-shadow: 0 4px 4px #00000040;
@@ -148,8 +150,8 @@
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
 
-  @media (min-width: $vp-1440) {
-    padding: 12px 0 0 198px;
+  @media (min-width: $vp-1024) {
+    padding: 12px 0 0 95px;
     font-size: 20px;
     line-height: 24px;
     text-shadow: 0 4px 4px #00000040;
@@ -169,7 +171,7 @@
 }
 
 .main-nav--closed .main-nav__toggle-closed {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: none;
   }
 
@@ -213,7 +215,7 @@
 }
 
 .main-nav--opened .main-nav__mobile {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: none;
   }
 
@@ -233,18 +235,18 @@
   }
 }
 
-.main-nav__mobile ul {
+.main-nav__mobile-list {
   padding: 42px 0 0 0;
   margin: 0;
   list-style-type: none;
 }
 
-.main-nav__mobile-item {
+.main-nav__mobile-list li {
   padding: 0 0 26px 25px;
   color: #011c40;
 }
 
-.main-nav__mobile-link {
+.main-nav__mobile-list a {
   font-weight: 500;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;
@@ -252,7 +254,7 @@
 }
 
 .main-nav--opened .main-nav__toggle-closed {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: none;
   }
 
@@ -262,7 +264,7 @@
 }
 
 .main-nav--opened .main-nav__toggle-opened {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: none;
   }
 
@@ -310,7 +312,7 @@
 }
 
 .main-nav--nojs {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     margin-top: 0;
   }
 
@@ -324,7 +326,7 @@
 }
 
 .main-nav--nojs .main-nav__mobile {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: none;
   }
 
@@ -344,4 +346,9 @@
   @media (min-width: $vp-320) {
     display: none;
   }
+}
+
+.main-nav div {
+  max-width: 1160px;
+  margin: 0 auto;
 }

@@ -1,8 +1,9 @@
 .booking {
   display: grid;
+  justify-content: center;
 
-  @media (min-width: $vp-1440) {
-    grid-template-columns: 50% 50%;
+  @media (min-width: $vp-1024) {
+    grid-template-columns: 502px 502px;
     grid-template-rows: 50% 50%;
     padding: 0;
     background-image: url("../img/desktop/background-request-desktop.webp");
@@ -33,11 +34,11 @@
   font-weight: 700;
   font-family: "Montserrat", "Arial", sans-serif;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     text-align: start;
-    padding: 213px 0 30px 163px;
+    padding: 213px 0 30px 0;
     font-size: 40px;
     line-height: 150%;
   }
@@ -67,11 +68,11 @@
   font-weight: 400;
   font-family: "Montserrat", "Arial", sans-serif;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     text-align: start;
-    padding: 2px 150px 200px 163px;
+    padding: 2px 150px 200px 0;
     font-size: 18px;
     line-height: 150%;
   }
@@ -97,22 +98,23 @@
 
 .booking form {
   display: grid;
-  justify-content: center;
   background: #011c40;
-  background-clip: content-box;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
+    grid-template-columns: 403px;
     grid-template-rows: auto;
     grid-column: 2 / 3;
     grid-row: 1 / -1;
-    padding: 50px 163px 54px 117px;
+    width: 403px;
+    height: 455px;
+    margin-left: auto;
+    margin-top: 50px;
   }
 
   @media (min-width: $vp-768) {
     grid-template-rows: auto;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    padding: 52px 12px 0 13px;
   }
 
   @media (min-width: $vp-320) {
@@ -129,7 +131,7 @@
   font-weight: 500;
   font-family: "Montserrat", "Arial", sans-serif;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     text-align: start;
     padding: 45px 50px 26px 50px;
     font-size: 18px;
@@ -166,7 +168,7 @@
   font-family: "Montserrat", "Arial", sans-serif;
   border: none;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding: 0 120px 0 15px;
   }
 
@@ -193,7 +195,7 @@
   background-color: #f9fbfd;
   cursor: pointer;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     top: 0;
     left: 50px;
   }
@@ -224,7 +226,7 @@
 .booking .control-label {
   height: 18px;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding-top: 2px;
     padding-left: 20px;
     letter-spacing: 0.6px;
@@ -251,7 +253,7 @@
   border: none;
   cursor: pointer;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding: 11px 0 11px 0;
     margin: 10px 50px 50px 50px;
   }

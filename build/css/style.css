@@ -389,7 +389,7 @@ template {
   font-weight: 400;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-weight: 500;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  src: url("../fonts/montserrat-medium.woff2") format("woff2"), url("../fonts/montserrat-medium.woff") format("woff");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-weight: 600;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  src: url("../fonts/montserrat-semibold.woff2") format("woff2"), url("../fonts/montserrat-semibold.woff") format("woff");
 }
 
 @font-face {
@@ -413,7 +413,7 @@ template {
   font-weight: 700;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  src: url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff");
 }
 
 *,
@@ -445,7 +445,6 @@ html {
 body {
   width: 100%;
   height: 100%;
-  max-width: 1366px;
   margin: 0 auto;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 15px #00000033;
@@ -647,149 +646,6 @@ button,
   transition: none !important;
 }
 
-.container {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 10px 0;
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: #2c39f2;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.btn--red {
-  background-color: #ff1553;
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  pointer-events: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.modal::-webkit-scrollbar {
-  display: none;
-}
-
-.modal__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 60px 40px;
-}
-
-.modal__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.modal__content {
-  position: relative;
-  width: 600px;
-  padding: 40px;
-  background-color: #ffffff;
-}
-
-.modal__close-btn {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background: rgba(255, 255, 255, 0);
-  border: none;
-  cursor: pointer;
-}
-
-.modal--responsive .modal__content {
-  width: 100%;
-}
-
-.modal--fit-content .modal__content {
-  width: auto;
-}
-
-.modal--no-scale {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.modal--preload {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
-.modal.is-active {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .main-nav {
   background: #011c40;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
@@ -803,14 +659,16 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
-.main-nav__list {
+.main-nav__container-list {
   list-style-type: none;
   margin: 0;
 }
 
-.main-nav__item-link {
+.main-nav__container a {
   color: #f9fbfd;
   margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -838,22 +696,27 @@ button,
   display: none;
 }
 
-.main-nav__mobile ul {
+.main-nav__mobile-list {
   padding: 42px 0 0 0;
   margin: 0;
   list-style-type: none;
 }
 
-.main-nav__mobile-item {
+.main-nav__mobile-list li {
   padding: 0 0 26px 25px;
   color: #011c40;
 }
 
-.main-nav__mobile-link {
+.main-nav__mobile-list a {
   font-weight: 500;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;
   line-height: 22px;
+}
+
+.main-nav div {
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .info {
@@ -862,6 +725,8 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .info h2 {
@@ -893,18 +758,23 @@ button,
   background-color: #011c40;
 }
 
-.footer-nav__list {
+.footer-nav__container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.footer-nav__container-list {
   margin: 0;
   list-style-type: none;
 }
 
-.footer-nav__list a {
+.footer-nav__container-list a {
   color: #f9fbfd;
   font-weight: 500;
   font-family: "Montserrat", "Arial", sans-serif;
 }
 
-.footer-nav__social {
+.footer-nav__container-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -914,16 +784,6 @@ button,
   margin: 0 0 0 auto;
   padding: 0;
   list-style-type: none;
-}
-
-.footer-nav__social li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 28px;
 }
 
 .advantages {
@@ -939,13 +799,14 @@ button,
 }
 
 .advantages ul {
+  max-width: 1160px;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style-type: none;
 }
 
@@ -970,6 +831,11 @@ button,
   line-height: 140%;
 }
 
+.cruises {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
 .cruises h2 {
   text-align: center;
   color: #011c40;
@@ -980,7 +846,6 @@ button,
 
 .cruises ul {
   padding: 0;
-  margin: 0;
   list-style-type: none;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -1061,6 +926,9 @@ button,
 .booking {
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .booking h2 {
@@ -1080,11 +948,7 @@ button,
 .booking form {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   background: #011c40;
-  background-clip: content-box;
 }
 
 .booking form h3 {
@@ -1219,13 +1083,6 @@ button,
   }
 } */
 
-@media (hover: hover), screen and (min-width: 0\0) {
-  .btn:hover,
-  .btn:focus {
-    opacity: 0.8;
-  }
-}
-
 @media (min-width: 320px) {
   .main-nav {
     min-height: 500px;
@@ -1248,7 +1105,7 @@ button,
     padding: 20px 0 0 15px;
   }
 
-  .main-nav__list {
+  .main-nav__container-list {
     display: none;
   }
 
@@ -1391,7 +1248,7 @@ button,
     padding-top: 33px;
   }
 
-  .footer-nav {
+  .footer-nav__container {
     display: block;
     padding: 40px 0 40px 15px;
   }
@@ -1402,37 +1259,16 @@ button,
     height: 22px;
   }
 
-  .footer-nav__list {
+  .footer-nav__container-list {
     padding: 27px 0 7px 0;
   }
 
-  .footer-nav__list a {
+  .footer-nav__container-list a {
     display: block;
     padding-bottom: 17px;
     padding-right: 0;
     font-size: 12px;
     line-height: 15px;
-  }
-
-  .footer-nav__social li {
-    padding-left: 0;
-  }
-
-  .footer-nav__social .footer-nav__social-facebook {
-    width: 9px;
-    height: 16px;
-  }
-
-  .footer-nav__social .footer-nav__social-instagram {
-    padding-left: 23px;
-    width: 16px;
-    height: 16px;
-  }
-
-  .footer-nav__social .footer-nav__social-twitter {
-    padding-left: 23px;
-    width: 16px;
-    height: 13px;
   }
 
   .advantages {
@@ -1640,6 +1476,23 @@ button,
   .contacts p {
     padding-bottom: 18px;
   }
+
+  .social__facebook-svg {
+    width: 9px;
+    height: 16px;
+  }
+
+  .social__instagram-svg {
+    padding-left: 23px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .social__twitter-svg {
+    padding-left: 23px;
+    width: 16px;
+    height: 13px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1666,15 +1519,15 @@ button,
     padding: 30px 0 0 45px;
   }
 
-  .main-nav__list {
+  .main-nav__container-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 28px 22px 0 0;
   }
 
-  .main-nav__item-link {
-    margin-right: 23px;
+  .main-nav__container a {
+    margin-left: 23px;
     font-size: 14px;
     line-height: 17px;
     font-weight: 500;
@@ -1752,7 +1605,7 @@ button,
     height: 264px;
   }
 
-  .footer-nav {
+  .footer-nav__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1768,37 +1621,18 @@ button,
     height: 20px;
   }
 
-  .footer-nav__list {
+  .footer-nav__container-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 0;
   }
 
-  .footer-nav__list a {
+  .footer-nav__container-list a {
     padding-right: 23px;
     padding-bottom: 0;
     font-size: 12px;
     line-height: 15px;
-  }
-
-  .footer-nav__social .footer-nav__social-facebook {
-    padding-right: 23px;
-    width: 9px;
-    height: 16px;
-  }
-
-  .footer-nav__social .footer-nav__social-instagram {
-    padding-left: 0;
-    padding-right: 23px;
-    width: 16px;
-    height: 16px;
-  }
-
-  .footer-nav__social .footer-nav__social-twitter {
-    padding-left: 0;
-    width: 16px;
-    height: 13px;
   }
 
   .advantages {
@@ -1881,7 +1715,7 @@ button,
 
   .cruises img {
     width: 309px;
-    height: 386px;
+    height: 100%;
   }
 
   .cruises h3 {
@@ -1948,7 +1782,6 @@ button,
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
-    padding: 52px 12px 0 13px;
   }
 
   .booking form h3 {
@@ -2015,14 +1848,33 @@ button,
   .contacts a {
     padding-bottom: 5px;
   }
+
+  .social__facebook-svg {
+    padding-right: 23px;
+    width: 9px;
+    height: 16px;
+  }
+
+  .social__instagram-svg {
+    padding-left: 0;
+    padding-right: 23px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .social__twitter-svg {
+    padding-left: 0;
+    width: 16px;
+    height: 13px;
+  }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .main-nav {
     min-height: 650px;
     background-image: url("../img/desktop/antarctic-desktop.webp");
     background-repeat: no-repeat;
-    background-size: 100% 659px;
+    background-size: 100% 658px;
   }
 
   .main-nav--opened .main-nav__container {
@@ -2038,32 +1890,32 @@ button,
   .main-nav img {
     width: 70px;
     height: 38px;
-    padding: 35px 0 0 103px;
+    padding: 35px 0 0 0;
   }
 
-  .main-nav__list {
+  .main-nav__container-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 42px 70px 0 0;
+    padding: 42px 0 0 0;
   }
 
-  .main-nav__item-link {
-    margin-right: 33px;
+  .main-nav__container a {
+    margin-left: 33px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
   }
 
   .main-nav h1 {
-    padding: 195px 0 0 198px;
+    padding: 195px 0 0 95px;
     font-size: 54px;
     line-height: 66px;
     text-shadow: 0 4px 4px #00000040;
   }
 
   .main-nav p {
-    padding: 12px 0 0 198px;
+    padding: 12px 0 0 95px;
     font-size: 20px;
     line-height: 24px;
     text-shadow: 0 4px 4px #00000040;
@@ -2099,7 +1951,7 @@ button,
     grid-column-gap: 15px;
     -ms-grid-row-align: center;
     align-self: center;
-    padding: 120px 103px;
+    padding: 120px 0;
   }
 
   .info h2 {
@@ -2129,14 +1981,14 @@ button,
     height: 301px;
   }
 
-  .footer-nav {
+  .footer-nav__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 50px 104px;
+    padding: 50px 0;
   }
 
   .footer-nav img {
@@ -2145,44 +1997,25 @@ button,
     padding-right: 40px;
   }
 
-  .footer-nav__list {
+  .footer-nav__container-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 0;
   }
 
-  .footer-nav__list a {
+  .footer-nav__container-list a {
     padding-right: 33px;
     padding-bottom: 0;
     font-size: 16px;
     line-height: 20px;
   }
 
-  .footer-nav__social .footer-nav__social-facebook {
-    padding-right: 28px;
-    width: 11px;
-    height: 20px;
-  }
-
-  .footer-nav__social .footer-nav__social-instagram {
-    padding-left: 0;
-    padding-right: 28px;
-    width: 20px;
-    height: 20px;
-  }
-
-  .footer-nav__social .footer-nav__social-twitter {
-    padding-left: 0;
-    width: 20px;
-    height: 17px;
-  }
-
   .advantages {
-    padding: 110px 103px 120px 103px;
+    padding: 8% 0;
     background-image: url("../img/desktop/background-desktop.webp");
     background-repeat: no-repeat;
-    background-size: 100% 562px;
+    background-size: 100% 573px;
   }
 
   .advantages h2 {
@@ -2192,9 +2025,9 @@ button,
   }
 
   .advantages ul {
-    -ms-grid-columns: 360px 360px 360px;
-    grid-template-columns: 360px 360px 360px;
-    grid-column-gap: 40px;
+    -ms-grid-columns: 32% 32% 32%;
+    grid-template-columns: 32% 32% 32%;
+    grid-column-gap: 2%;
   }
 
   .advantages li {
@@ -2239,7 +2072,7 @@ button,
   }
 
   .cruises {
-    padding: 110px 118px 120px 118px;
+    padding: 10% 0;
   }
 
   .cruises h2 {
@@ -2251,14 +2084,14 @@ button,
   .cruises ul {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 260px 260px 260px 260px;
-    grid-template-columns: 260px 260px 260px 260px;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    -ms-grid-columns: 24% 24% 24% 24%;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1%;
   }
 
   .cruises img {
-    width: 260px;
+    width: 100%;
     height: 386px;
   }
 
@@ -2269,12 +2102,12 @@ button,
   }
 
   .cruises div {
-    padding: 68px 25px 0 25px;
+    padding: 68px 25px 0 15px;
   }
 
   .cruises div:hover h3 {
     top: 30px;
-    left: 25px;
+    left: 15px;
   }
 
   .cruises button {
@@ -2283,8 +2116,8 @@ button,
   }
 
   .booking {
-    -ms-grid-columns: 50% 50%;
-    grid-template-columns: 50% 50%;
+    -ms-grid-columns: 502px 502px;
+    grid-template-columns: 502px 502px;
     -ms-grid-rows: 50% 50%;
     grid-template-rows: 50% 50%;
     padding: 0;
@@ -2301,7 +2134,7 @@ button,
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
     text-align: start;
-    padding: 213px 0 30px 163px;
+    padding: 213px 0 30px 0;
     font-size: 40px;
     line-height: 150%;
   }
@@ -2314,19 +2147,24 @@ button,
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
     text-align: start;
-    padding: 2px 150px 200px 163px;
+    padding: 2px 150px 200px 0;
     font-size: 18px;
     line-height: 150%;
   }
 
   .booking form {
+    -ms-grid-columns: 403px;
+    grid-template-columns: 403px;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
     grid-row: 1 / -1;
-    padding: 50px 163px 54px 117px;
+    width: 403px;
+    height: 455px;
+    margin-left: auto;
+    margin-top: 50px;
   }
 
   .booking form h3 {
@@ -2363,7 +2201,9 @@ button,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 120px 103px;
+    padding: 120px 0;
+    max-width: 1160px;
+    margin: 0 auto;
   }
 
   .contacts iframe {
@@ -2392,35 +2232,65 @@ button,
   .contacts a {
     padding-bottom: 10px;
   }
-}
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
+  .social__facebook-svg {
+    padding-right: 28px;
+    width: 11px;
+    height: 20px;
+  }
+
+  .social__instagram-svg {
+    padding-left: 0;
+    padding-right: 28px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .social__twitter-svg {
+    padding-left: 0;
+    width: 20px;
+    height: 17px;
   }
 }
 
-@media (max-width: 1023px) {
-  .container {
-    padding: 0 24px;
-  }
-}
-
-@media (max-width: 767px) {
-  .container {
-    padding: 0 16px;
+@media (min-width: 1366px) {
+  .advantages {
+    padding: 110px 0 120px 0;
+    background-image: url("../img/desktop/background-desktop.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 562px;
   }
 
-  .modal__wrapper {
-    padding: 60px 16px;
+  .advantages ul {
+    -ms-grid-columns: 360px 360px 360px;
+    grid-template-columns: 360px 360px 360px;
+    grid-column-gap: 40px;
   }
 
-  .modal__content {
-    width: 100%;
-    padding: 20px;
+  .cruises {
+    padding: 110px 0 120px 0;
   }
 
-  .modal--fit-content .modal__content {
-    width: 100%;
+  .cruises ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 260px 260px 260px 260px;
+    grid-template-columns: 260px 260px 260px 260px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  .cruises img {
+    width: 260px;
+    height: 386px;
+  }
+
+  .cruises div {
+    padding: 68px 25px 0 25px;
+  }
+
+  .cruises div:hover h3 {
+    top: 30px;
+    left: 25px;
   }
 }

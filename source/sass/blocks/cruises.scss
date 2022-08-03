@@ -1,6 +1,14 @@
 .cruises {
-  @media (min-width: $vp-1440) {
-    padding: 110px 118px 120px 118px;
+  max-width: 1160px;
+  margin: 0 auto;
+
+
+  @media (min-width: $vp-1366) {
+    padding: 110px 0 120px 0;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 10% 0;
   }
 
   @media (min-width: $vp-768) {
@@ -19,7 +27,7 @@
   font-weight: 600;
   font-family: "Montserrat", "Arial", sans-serif;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding-bottom: 49px;
     font-size: 28px;
     line-height: 150%;
@@ -40,15 +48,22 @@
 
 .cruises ul {
   padding: 0;
-  margin: 0;
   list-style-type: none;
   flex-wrap: wrap;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1366) {
     display: grid;
     grid-template-columns: 260px 260px 260px 260px;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+  }
+
+  @media (min-width: $vp-1024) {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+
+    grid-column-gap: 1vw;
+    grid-row-gap: 1%;
   }
 
   @media (min-width: $vp-768) {
@@ -80,14 +95,19 @@
   display: block;
   position: relative;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1366) {
     width: 260px;
+    height: 386px;
+  }
+
+  @media (min-width: $vp-1024) {
+    width: 100%;
     height: 386px;
   }
 
   @media (min-width: $vp-768) {
     width: 309px;
-    height: 386px;
+    height: 100%;
   }
 
   @media (min-width: $vp-320) {
@@ -104,7 +124,7 @@
   line-height: 150%;
   font-family: "Montserrat", "Arial", sans-serif;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     position: absolute;
     bottom: 22px;
     left: 30px;
@@ -132,8 +152,12 @@
   opacity: 0;
   background-color: #011c40;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1366) {
     padding: 68px 25px 0 25px;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 68px 25px 0 15px;
   }
 
   @media (min-width: $vp-768) {
@@ -146,9 +170,14 @@
 }
 
 .cruises div:hover h3 {
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1366) {
     top: 30px;
     left: 25px;
+  }
+
+  @media (min-width: $vp-1024) {
+    top: 30px;
+    left: 15px;
   }
 
   @media (min-width: $vp-768) {
@@ -195,7 +224,7 @@
   cursor: pointer;
   z-index: 10;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding: 9px 47px;
     margin-bottom: 11px;
   }

@@ -1,0 +1,60 @@
+.social__facebook-svg {
+  @media (min-width: $vp-1024) {
+    padding-right: 28px;
+    width: 11px;
+    height: 20px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding-right: 23px;
+    width: 9px;
+    height: 16px;
+  }
+
+  @media (min-width: $vp-320) {
+    width: 9px;
+    height: 16px;
+  }
+}
+
+.social__instagram-svg {
+  @media (min-width: $vp-1024) {
+    padding-left: 0;
+    padding-right: 28px;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding-left: 0;
+    padding-right: 23px;
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: $vp-320) {
+    padding-left: 23px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.social__twitter-svg {
+  @media (min-width: $vp-1024) {
+    padding-left: 0;
+    width: 20px;
+    height: 17px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding-left: 0;
+    width: 16px;
+    height: 13px;
+  }
+
+  @media (min-width: $vp-320) {
+    padding-left: 23px;
+    width: 16px;
+    height: 13px;
+  }
+}
