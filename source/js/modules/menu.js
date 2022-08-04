@@ -49,11 +49,11 @@ navToggleOpened.addEventListener('click', function () {
 
 document.addEventListener('click', function (e) {
   const target = e.target;
-  const itsТavMobile = target === navMobile || navMobile.contains(target);
-  const itsТavToggleClosed = target === navToggleClosed;
+  const itsTavMobile = target === navMobile || navMobile.contains(target);
+  const itsTavToggleClosed = target === navToggleClosed;
   const navMainActive = navMain.classList.contains('main-nav--opened');
 
-  if (!itsТavMobile && !itsТavToggleClosed && navMainActive) {
+  if (!itsTavMobile && !itsTavToggleClosed && navMainActive) {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
   }
@@ -61,11 +61,11 @@ document.addEventListener('click', function (e) {
 
 document.addEventListener('click', function (e) {
   const target = e.target;
-  const itsТavMobile = target === navMobile || navMobile.contains(target);
-  const itsТavToggleClosed = target === navToggleClosed;
+  const itsTavMobile = target === navMobile || navMobile.contains(target);
+  const itsTavToggleClosed = target === navToggleClosed;
   const wrapperActive = wrapper.classList.contains('wrapper--opened');
 
-  if (!itsТavMobile && !itsТavToggleClosed && wrapperActive) {
+  if (!itsTavMobile && !itsTavToggleClosed && wrapperActive) {
     wrapper.classList.add('wrapper--closed');
     wrapper.classList.remove('wrapper--opened');
   }

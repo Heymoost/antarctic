@@ -86,6 +86,7 @@
 .cruises li {
   position: relative;
   display: inline-block;
+  vertical-align: auto;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   background-color: #ffffff;
   overflow: hidden;
@@ -169,6 +170,30 @@
   }
 }
 
+.cruises dl {
+  margin: 0;
+}
+
+.cruises dt {
+  padding-bottom: 2px;
+  color: #f9fbfd;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.cruises dd {
+  padding-bottom: 12px;
+  color: #d8d8d9;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
 .cruises div:hover h3 {
   @media (min-width: $vp-1366) {
     top: 30px;
@@ -189,26 +214,6 @@
     top: 30px;
     left: 25px;
   }
-}
-
-.cruises h4 {
-  padding-bottom: 2px;
-  color: #f9fbfd;
-  margin: 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 140%;
-  font-family: "Montserrat", "Arial", sans-serif;
-}
-
-.cruises p {
-  padding-bottom: 12px;
-  color: #d8d8d9;
-  margin: 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
-  font-family: "Montserrat", "Arial", sans-serif;
 }
 
 .cruises button {

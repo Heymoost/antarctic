@@ -1,0 +1,94 @@
+form {
+  display: grid;
+  background: #011c40;
+  margin: 0 auto;
+
+  @media (min-width: $vp-1024) {
+    grid-template-columns: 403px;
+    grid-template-rows: auto;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    width: 403px;
+    height: 455px;
+    margin-left: auto;
+    margin-top: 50px;
+  }
+
+  @media (min-width: $vp-768) {
+    grid-template-rows: auto;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    width: 403px;
+    height: 455px;
+  }
+
+  @media (min-width: $vp-320) {
+    grid-template-rows: auto;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    padding: 0;
+  }
+}
+
+form h3 {
+  margin: 0;
+  color: #f9fbfd;
+  font-weight: 500;
+  font-family: "Montserrat", "Arial", sans-serif;
+
+  @media (min-width: $vp-1024) {
+    text-align: start;
+    padding: 45px 50px 26px 50px;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-768) {
+    text-align: start;
+    padding: 45px 50px 26px 50px;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $vp-320) {
+    text-align: center;
+    padding: 35px 0 28px 0;
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+
+form label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+form input {
+  height: 43px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "Montserrat", "Arial", sans-serif;
+  border: none;
+
+  @media (min-width: $vp-1024) {
+    padding: 0 120px 0 15px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 0 120px 0 15px;
+  }
+
+  @media (min-width: $vp-320) {
+    padding: 0 48px 0 14px;
+  }
+}
+
+form span {
+  color: #f9fbfd;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+}
