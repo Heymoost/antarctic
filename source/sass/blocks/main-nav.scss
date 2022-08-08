@@ -80,6 +80,7 @@
 }
 
 .main-nav__container-list {
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
 
@@ -90,7 +91,7 @@
 
   @media (min-width: $vp-768) {
     display: flex;
-    padding: 28px 22px 0 0;
+    padding: 28px 46px 0 0;
   }
 
   @media (min-width: $vp-320) {
@@ -98,7 +99,7 @@
   }
 }
 
-.main-nav__container a {
+.main-nav__container-list a {
   color: #f9fbfd;
   margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -247,6 +248,7 @@
 }
 
 .main-nav__mobile-list a {
+  color: #011c40;
   font-weight: 500;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;

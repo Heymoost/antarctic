@@ -12,6 +12,7 @@ const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
 const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 const gcmq = require('gulp-group-css-media-queries');
 
 const css = () => {
@@ -33,6 +34,7 @@ const css = () => {
 
 const js = () => {
   return gulp.src(['source/js/main.js'])
+      .pipe(webpackStream(webpackConfig))
       .pipe(gulp.dest('build/js'))
 };
 
@@ -70,7 +72,7 @@ const copyImages = () => {
 const copy = () => {
   return gulp.src([
     'source/**.html',
-    'source/fonts/**',
+    'source/font/**',
     'source/img/**',
     'source/favicon/**',
   ], {
@@ -83,15 +85,16 @@ const clean = () => {
   return del('build');
 };
 
-const syncServer = () => {
+const syncServer = (done) => {
   server.init({
-    server: 'build/',
-    index: 'sitemap.html',
+    server: {
+      baseDir: 'build'
+    },
     notify: false,
-    open: true,
     cors: true,
     ui: false,
   });
+  done();
 
   gulp.watch('source/**.html', gulp.series(copy, refresh));
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series(css));

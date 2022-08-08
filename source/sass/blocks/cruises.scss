@@ -4,7 +4,7 @@
 
 
   @media (min-width: $vp-1366) {
-    padding: 110px 0 120px 0;
+    padding: 110px 0 104px 0;
   }
 
   @media (min-width: $vp-1024) {
@@ -12,11 +12,11 @@
   }
 
   @media (min-width: $vp-768) {
-    padding: 90px 0 100px 0;
+    padding: 90px 0 84px 0;
   }
 
   @media (min-width: $vp-320) {
-    padding: 58px 0 65px 0;
+    padding: 58px 0 49px 0;
   }
 }
 
@@ -28,19 +28,19 @@
   font-family: "Montserrat", "Arial", sans-serif;
 
   @media (min-width: $vp-1024) {
-    padding-bottom: 49px;
+    padding-bottom: 34px;
     font-size: 28px;
     line-height: 150%;
   }
 
   @media (min-width: $vp-768) {
-    padding-bottom: 49px;
+    padding-bottom: 33px;
     font-size: 26px;
     line-height: 150%;
   }
 
   @media (min-width: $vp-320) {
-    padding-bottom: 29px;
+    padding-bottom: 13px;
     font-size: 24px;
     line-height: 150%;
   }

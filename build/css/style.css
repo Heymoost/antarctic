@@ -3,7 +3,7 @@
   font-weight: 400;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff");
+  src: url("../font/montserrat-regular.woff2") format("woff2"), url("../font/montserrat-regular.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-weight: 500;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/montserrat-medium.woff2") format("woff2"), url("../fonts/montserrat-medium.woff") format("woff");
+  src: url("../font/montserrat-medium.woff2") format("woff2"), url("../font/montserrat-medium.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-weight: 600;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/montserrat-semibold.woff2") format("woff2"), url("../fonts/montserrat-semibold.woff") format("woff");
+  src: url("../font/montserrat-semibold.woff2") format("woff2"), url("../font/montserrat-semibold.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-weight: 700;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff");
+  src: url("../font/montserrat-bold.woff2") format("woff2"), url("../font/montserrat-bold.woff") format("woff");
 }
 
 *,
@@ -208,11 +208,13 @@ button,
 }
 
 .main-nav__container-list {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
 }
 
-.main-nav__container a {
+.main-nav__container-list a {
   color: #f9fbfd;
   margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -252,6 +254,7 @@ button,
 }
 
 .main-nav__mobile-list a {
+  color: #011c40;
   font-weight: 500;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;
@@ -308,6 +311,8 @@ button,
 }
 
 .footer__container-list {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
   list-style-type: none;
 }
@@ -823,7 +828,7 @@ form span {
     padding: 58px 15px 62px 15px;
     background-image: url("../img/mobile/background-mobile.webp");
     background-repeat: no-repeat;
-    background-size: 100% 997px;
+    background-size: 100% 100%;
   }
 
   .advantages h2 {
@@ -881,11 +886,11 @@ form span {
   }
 
   .cruises {
-    padding: 58px 0 65px 0;
+    padding: 58px 0 49px 0;
   }
 
   .cruises h2 {
-    padding-bottom: 29px;
+    padding-bottom: 13px;
     font-size: 24px;
     line-height: 150%;
   }
@@ -1070,10 +1075,10 @@ form span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 28px 22px 0 0;
+    padding: 28px 46px 0 0;
   }
 
-  .main-nav__container a {
+  .main-nav__container-list a {
     margin-left: 23px;
     font-size: 14px;
     line-height: 17px;
@@ -1186,7 +1191,7 @@ form span {
     padding: 90px 45px 100px 45px;
     background-image: url("../img/tablet/background-tablet.webp");
     background-repeat: no-repeat;
-    background-size: 100% 590px;
+    background-size: 100% 100%;
   }
 
   .advantages h2 {
@@ -1239,11 +1244,11 @@ form span {
   }
 
   .cruises {
-    padding: 90px 0 100px 0;
+    padding: 90px 0 84px 0;
   }
 
   .cruises h2 {
-    padding-bottom: 49px;
+    padding-bottom: 33px;
     font-size: 26px;
     line-height: 150%;
   }
@@ -1315,7 +1320,7 @@ form span {
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
     text-align: center;
-    padding: 0 40px 60px 40px;
+    padding: 0 40px 52px 40px;
     font-size: 18px;
     line-height: 150%;
   }
@@ -1448,7 +1453,7 @@ form span {
     padding: 42px 0 0 0;
   }
 
-  .main-nav__container a {
+  .main-nav__container-list a {
     margin-left: 33px;
     font-size: 16px;
     line-height: 20px;
@@ -1563,7 +1568,7 @@ form span {
     padding: 8% 0;
     background-image: url("../img/desktop/background-desktop.webp");
     background-repeat: no-repeat;
-    background-size: 100% 573px;
+    background-size: 100% 100%;
   }
 
   .advantages h2 {
@@ -1624,7 +1629,7 @@ form span {
   }
 
   .cruises h2 {
-    padding-bottom: 49px;
+    padding-bottom: 34px;
     font-size: 28px;
     line-height: 150%;
   }
@@ -1784,7 +1789,7 @@ form span {
     grid-row: 1 / -1;
     width: 403px;
     height: 455px;
-    margin-left: auto;
+    margin-left: 117px;
     margin-top: 50px;
   }
 
@@ -1805,7 +1810,7 @@ form span {
     padding: 110px 0 120px 0;
     background-image: url("../img/desktop/background-desktop.webp");
     background-repeat: no-repeat;
-    background-size: 100% 562px;
+    background-size: 100% 100%;
   }
 
   .advantages ul {
@@ -1815,7 +1820,7 @@ form span {
   }
 
   .cruises {
-    padding: 110px 0 120px 0;
+    padding: 110px 0 104px 0;
   }
 
   .cruises ul {
@@ -1839,5 +1844,16 @@ form span {
   .cruises div:hover h3 {
     top: 30px;
     left: 25px;
+  }
+
+  .booking {
+    -ms-grid-columns: 520px 520px;
+    grid-template-columns: 520px 520px;
+    -ms-grid-rows: 50% 50%;
+    grid-template-rows: 50% 50%;
+    padding: 0;
+    background-image: url("../img/desktop/background-request-desktop.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 555px;
   }
 }

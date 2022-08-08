@@ -1,4 +1,3 @@
-
 let wrapper = document.querySelector('.wrapper');
 let navMain = document.querySelector('.main-nav');
 let navMobile = document.querySelector('.main-nav__mobile');

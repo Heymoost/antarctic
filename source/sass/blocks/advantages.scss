@@ -5,28 +5,28 @@
     padding: 110px 0 120px 0;
     background-image: url("../img/desktop/background-desktop.webp");
     background-repeat: no-repeat;
-    background-size: 100% 562px;
+    background-size: 100% 100%;
   }
 
   @media (min-width: $vp-1024) {
     padding: 8% 0;
     background-image: url("../img/desktop/background-desktop.webp");
     background-repeat: no-repeat;
-    background-size: 100% 573px;
+    background-size: 100% 100%;
   }
 
   @media (min-width: $vp-768) {
     padding: 90px 45px 100px 45px;
     background-image: url("../img/tablet/background-tablet.webp");
     background-repeat: no-repeat;
-    background-size: 100% 590px;
+    background-size: 100% 100%;
   }
 
   @media (min-width: $vp-320) {
     padding: 58px 15px 62px 15px;
     background-image: url("../img/mobile/background-mobile.webp");
     background-repeat: no-repeat;
-    background-size: 100% 997px;
+    background-size: 100% 100%;
   }
 }
 

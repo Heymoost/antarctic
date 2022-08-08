@@ -2,6 +2,15 @@
   display: grid;
   justify-content: center;
 
+  @media (min-width: $vp-1366) {
+    grid-template-columns: 520px 520px;
+    grid-template-rows: 50% 50%;
+    padding: 0;
+    background-image: url("../img/desktop/background-request-desktop.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 555px;
+  }
+
   @media (min-width: $vp-1024) {
     grid-template-columns: 502px 502px;
     grid-template-rows: 50% 50%;
@@ -81,7 +90,7 @@
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     text-align: center;
-    padding: 0 40px 60px 40px;
+    padding: 0 40px 52px 40px;
     font-size: 18px;
     line-height: 150%;
   }
