@@ -85,7 +85,7 @@ const clean = () => {
   return del('build');
 };
 
-const syncServer = (done) => {
+const syncServer = () => {
   server.init({
     server: {
       baseDir: 'build'
@@ -94,7 +94,6 @@ const syncServer = (done) => {
     cors: true,
     ui: false,
   });
-  done();
 
   gulp.watch('source/**.html', gulp.series(copy, refresh));
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series(css));
