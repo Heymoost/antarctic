@@ -17,6 +17,11 @@
   }
 }
 
+.social__facebook-svg a {
+  width: 11px;
+  height: 20px;
+}
+
 .social__instagram-svg {
   @media (min-width: $vp-1024) {
     padding-left: 0;

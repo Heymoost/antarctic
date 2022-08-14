@@ -6,29 +6,32 @@
     min-height: 650px;
     background-image: url("../img/desktop/antarctic-desktop.webp");
     background-repeat: no-repeat;
-    background-size: 100% 658px;
+    background-size: 100% 100%;
   }
 
   @media (min-width: $vp-768) {
     min-height: 638px;
     background-image: url("../img/tablet/antarctic-tablet.webp");
     background-repeat: no-repeat;
-    background-size: 100% 638px;
+    background-size: 100% 100%;
   }
 
   @media (min-width: $vp-320) {
     min-height: 500px;
     background-image: url("../img/mobile/antarctic-mobile.webp");
     background-repeat: no-repeat;
-    background-size: 100% 500px;
+    background-size: 100% 100%;
   }
 }
 
 .main-nav__container {
   display: flex;
   justify-content: space-between;
-  max-width: 1160px;
-  margin: 0 auto;
+  box-sizing: content-box;
+
+  @media (min-width: $vp-1024) {
+    padding: 0 45px;
+  }
 }
 
 .main-nav--opened .main-nav__container {
@@ -60,6 +63,8 @@
 }
 
 .main-nav img {
+  flex-shrink: 0;
+
   @media (min-width: $vp-1024) {
     width: 70px;
     height: 38px;
@@ -85,6 +90,7 @@
   margin: 0;
 
   @media (min-width: $vp-1024) {
+    max-width: 954px;
     display: flex;
     padding: 42px 0 0 0;
   }
@@ -351,6 +357,13 @@
 }
 
 .main-nav div {
-  max-width: 1160px;
   margin: 0 auto;
+
+  @media (min-width: $vp-1366) {
+    max-width: 1160px;
+  }
+
+  @media (min-width: $vp-1024) {
+    max-width: 1160px;
+  }
 }

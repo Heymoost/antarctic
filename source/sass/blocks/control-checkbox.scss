@@ -2,22 +2,23 @@
   position: absolute;
   width: 18px;
   height: 18px;
+  margin: 0;
   background-color: #f9fbfd;
   cursor: pointer;
 
   @media (min-width: $vp-1024) {
     top: 0;
-    left: 50px;
+    left: 0;
   }
 
   @media (min-width: $vp-768) {
     top: 0;
-    left: 50px;
+    left: 0;
   }
 
   @media (min-width: $vp-320) {
     top: 1px;
-    left: 31px;
+    left: 0;
   }
 }
 

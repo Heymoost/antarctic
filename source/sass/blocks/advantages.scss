@@ -2,36 +2,58 @@
   background: #e3ecf6;
 
   @media (min-width: $vp-1366) {
-    padding: 110px 0 120px 0;
     background-image: url("../img/desktop/background-desktop.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
 
   @media (min-width: $vp-1024) {
-    padding: 8% 0;
     background-image: url("../img/desktop/background-desktop.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
 
   @media (min-width: $vp-768) {
-    padding: 90px 45px 100px 45px;
     background-image: url("../img/tablet/background-tablet.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
 
   @media (min-width: $vp-320) {
-    padding: 58px 15px 62px 15px;
     background-image: url("../img/mobile/background-mobile.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
 }
 
+.advantages div {
+  display: flex;
+  max-width: 1160px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  box-sizing: content-box;
+
+
+  @media (min-width: $vp-1366) {
+    padding: 120px 0;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 120px 45px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 100px 45px;
+  }
+
+  @media (min-width: $vp-320) {
+    padding: 65px 15px;
+  }
+}
+
 .advantages h2 {
   text-align: center;
+  width: 100%;
   margin: 0;
   color: #011c40;
   font-weight: 600;
@@ -70,12 +92,12 @@
   }
 
   @media (min-width: $vp-1024) {
-    grid-template-columns: 32% 32% 32%;
-    grid-column-gap: 2%;
+    grid-template-columns: 31% 31% 31%;
+    grid-column-gap: 35px;
   }
 
   @media (min-width: $vp-768) {
-    grid-template-columns: 206px 206px 206px;
+    grid-template-columns: 30.5% 30.5% 30.5%;
     grid-column-gap: 30px;
   }
 

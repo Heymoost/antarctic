@@ -1,27 +1,28 @@
 .cruises {
-  max-width: 1160px;
-  margin: 0 auto;
-
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   @media (min-width: $vp-1366) {
-    padding: 110px 0 104px 0;
+    padding: 120px 0;
   }
 
   @media (min-width: $vp-1024) {
-    padding: 10% 0;
+    padding: 120px 0;
   }
 
   @media (min-width: $vp-768) {
-    padding: 90px 0 84px 0;
+    padding: 100px 0;
   }
 
   @media (min-width: $vp-320) {
-    padding: 58px 0 49px 0;
+    padding: 65px 0;
   }
 }
 
 .cruises h2 {
   text-align: center;
+  width: 100%;
   color: #011c40;
   margin: 0;
   font-weight: 600;
@@ -47,49 +48,33 @@
 }
 
 .cruises ul {
+  display: flex;
+  justify-content: center;
   padding: 0;
   list-style-type: none;
   flex-wrap: wrap;
 
   @media (min-width: $vp-1366) {
-    display: grid;
-    grid-template-columns: 260px 260px 260px 260px;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-  }
-
-  @media (min-width: $vp-1024) {
-    display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
-
-    grid-column-gap: 1vw;
-    grid-row-gap: 1%;
-  }
-
-  @media (min-width: $vp-768) {
-    display: grid;
-    grid-template-columns: 309px 309px;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    justify-content: center;
-  }
-
-  @media (min-width: $vp-320) {
-    display: grid;
-    grid-template-columns: 270px;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    justify-content: center;
+    max-width: 1160px;
   }
 }
 
 .cruises li {
   position: relative;
-  display: inline-block;
-  vertical-align: auto;
+  width: 260px;
+  height: 386px;
+  margin-bottom: 30px;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   background-color: #ffffff;
-  overflow: hidden;
+
+
+  @media (min-width: $vp-768) {
+    margin-right: 30px;
+  }
+
+  @media (min-width: $vp-320) {
+    margin-right: 0;
+  }
 }
 
 .cruises img {
@@ -248,3 +233,4 @@
 .cruises div:hover {
   opacity: 1;
 }
+

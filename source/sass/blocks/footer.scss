@@ -5,22 +5,23 @@
 .footer__container {
   max-width: 1160px;
   margin: 0 auto;
+  box-sizing: content-box;
 
   @media (min-width: $vp-1024) {
-    display: flex;
-    align-items: center;
-    padding: 50px 0;
-  }
-
-  @media (min-width: $vp-768) {
     display: flex;
     align-items: center;
     padding: 50px 45px;
   }
 
+  @media (min-width: $vp-768) {
+    display: flex;
+    align-items: center;
+    padding: 48px 45px;
+  }
+
   @media (min-width: $vp-320) {
     display: block;
-    padding: 40px 0 40px 15px;
+    padding: 36px 0 36px 15px;
   }
 }
 
@@ -50,6 +51,7 @@
   list-style-type: none;
 
   @media (min-width: $vp-1024) {
+    max-width: 800px;
     display: flex;
     padding: 0;
   }
@@ -71,14 +73,14 @@
 
 
   @media (min-width: $vp-1024) {
-    padding-right: 33px;
+    margin-right: 33px;
     padding-bottom: 0;
     font-size: 16px;
     line-height: 20px;
   }
 
   @media (min-width: $vp-768) {
-    padding-right: 23px;
+    margin-right: 23px;
     padding-bottom: 0;
     font-size: 12px;
     line-height: 15px;
@@ -96,7 +98,23 @@
 .footer__container-social {
   display: flex;
   align-items: center;
-  margin: 0 0 0 auto;
+  max-width: 200px;
   padding: 0;
   list-style-type: none;
+  flex-wrap: wrap;
+
+  @media (min-width: $vp-1024) {
+    max-width: 200px;
+    margin: 0 0 0 auto;
+  }
+
+  @media (min-width: $vp-768) {
+    max-width: 150px;
+    margin: 0 0 0 auto;
+  }
+
+  @media (min-width: $vp-320) {
+    max-width: 300px;
+    margin: 0;
+  }
 }

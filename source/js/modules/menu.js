@@ -3,6 +3,11 @@ let navMain = document.querySelector('.main-nav');
 let navMobile = document.querySelector('.main-nav__mobile');
 let navToggleClosed = document.querySelector('.main-nav__toggle-closed');
 let navToggleOpened = document.querySelector('.main-nav__toggle-opened');
+let advantages = document.querySelector('.main-nav__mobile-advantages');
+let booking = document.querySelector('.main-nav__mobile-booking');
+let cruises = document.querySelector('.main-nav__mobile-cruises');
+let contacts = document.querySelector('.main-nav__mobile-contacts');
+
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -68,4 +73,33 @@ document.addEventListener('click', function (e) {
     wrapper.classList.add('wrapper--closed');
     wrapper.classList.remove('wrapper--opened');
   }
+});
+
+
+advantages.addEventListener('click', function () {
+  wrapper.classList.add('wrapper--closed');
+  wrapper.classList.remove('wrapper--opened');
+  navMain.classList.add('main-nav--closed');
+  navMain.classList.remove('main-nav--opened');
+});
+
+booking.addEventListener('click', function () {
+  wrapper.classList.add('wrapper--closed');
+  wrapper.classList.remove('wrapper--opened');
+  navMain.classList.add('main-nav--closed');
+  navMain.classList.remove('main-nav--opened');
+});
+
+cruises.addEventListener('click', function () {
+  wrapper.classList.add('wrapper--closed');
+  wrapper.classList.remove('wrapper--opened');
+  navMain.classList.add('main-nav--closed');
+  navMain.classList.remove('main-nav--opened');
+});
+
+contacts.addEventListener('click', function () {
+  wrapper.classList.add('wrapper--closed');
+  wrapper.classList.remove('wrapper--opened');
+  navMain.classList.add('main-nav--closed');
+  navMain.classList.remove('main-nav--opened');
 });
