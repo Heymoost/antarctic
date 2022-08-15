@@ -61,7 +61,6 @@
 
 .cruises li {
   position: relative;
-
   height: 386px;
   margin-bottom: 30px;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
@@ -80,6 +79,10 @@
     width: 270px;
     margin-right: 0;
   }
+}
+
+.cruises a:focus div {
+  opacity: 1;
 }
 
 .cruises img {
@@ -130,6 +133,28 @@
   @media (min-width: $vp-320) {
     position: absolute;
     bottom: 18px;
+    left: 25px;
+  }
+}
+
+.cruises a:focus h3 {
+  @media (min-width: $vp-1366) {
+    top: 30px;
+    left: 25px;
+  }
+
+  @media (min-width: $vp-1024) {
+    top: 30px;
+    left: 15px;
+  }
+
+  @media (min-width: $vp-768) {
+    top: 30px;
+    left: 35px;
+  }
+
+  @media (min-width: $vp-320) {
+    top: 30px;
     left: 25px;
   }
 }

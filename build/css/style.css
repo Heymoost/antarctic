@@ -407,6 +407,10 @@ button,
   background-color: #ffffff;
 }
 
+.cruises a:focus div {
+  opacity: 1;
+}
+
 .cruises img {
   display: block;
   position: relative;
@@ -921,6 +925,11 @@ form span {
     left: 25px;
   }
 
+  .cruises a:focus h3 {
+    top: 30px;
+    left: 25px;
+  }
+
   .cruises div {
     padding: 68px 25px 30px 25px;
   }
@@ -1317,6 +1326,11 @@ form span {
     left: 35px;
   }
 
+  .cruises a:focus h3 {
+    top: 30px;
+    left: 35px;
+  }
+
   .cruises div {
     padding: 68px 35px 30px 35px;
   }
@@ -1687,6 +1701,11 @@ form span {
     left: 30px;
   }
 
+  .cruises a:focus h3 {
+    top: 30px;
+    left: 15px;
+  }
+
   .cruises div {
     padding: 68px 25px 30px 15px;
   }
@@ -1887,6 +1906,11 @@ form span {
   .cruises img {
     width: 260px;
     height: 386px;
+  }
+
+  .cruises a:focus h3 {
+    top: 30px;
+    left: 25px;
   }
 
   .cruises div {
