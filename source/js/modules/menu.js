@@ -1,15 +1,15 @@
 let wrapper = document.querySelector('.wrapper');
 let navMain = document.querySelector('.main-nav');
-let navMobile = document.querySelector('.main-nav__mobile');
+let navMobile = document.querySelector('.wrapper-nav__mobile');
 let navToggleClosed = document.querySelector('.main-nav__toggle-closed');
-let navToggleOpened = document.querySelector('.main-nav__toggle-opened');
-let advantages = document.querySelector('.main-nav__mobile-advantages');
-let booking = document.querySelector('.main-nav__mobile-booking');
-let cruises = document.querySelector('.main-nav__mobile-cruises');
-let contacts = document.querySelector('.main-nav__mobile-contacts');
+let navToggleOpened = document.querySelector('.wrapper-nav__toggle-opened');
+let advantages = document.querySelector('.wrapper-nav__mobile-advantages');
+let booking = document.querySelector('.wrapper-nav__mobile-booking');
+let cruises = document.querySelector('.wrapper-nav__mobile-cruises');
+let contacts = document.querySelector('.wrapper-nav__mobile-contacts');
 
 
-navMain.classList.remove('main-nav--nojs');
+wrapper.classList.remove('wrapper-nav--nojs');
 
 navToggleClosed.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
@@ -49,13 +49,21 @@ navToggleOpened.addEventListener('click', function () {
     wrapper.classList.add('wrapper--closed');
     wrapper.classList.remove('wrapper--opened');
   }
+});
+
+navToggleClosed.addEventListener('click', function () {
+  wrapper.classList.add('overlay');
+});
+
+navToggleOpened.addEventListener('click', function () {
+  wrapper.classList.remove('overlay');
 });
 
 document.addEventListener('click', function (e) {
   const target = e.target;
   const itsTavMobile = target === navMobile || navMobile.contains(target);
   const itsTavToggleClosed = target === navToggleClosed;
-  const navMainActive = navMain.classList.contains('main-nav--opened');
+  const navMainActive = navMain.classList.contains('wrapper--opened');
 
   if (!itsTavMobile && !itsTavToggleClosed && navMainActive) {
     navMain.classList.add('main-nav--closed');
@@ -72,6 +80,9 @@ document.addEventListener('click', function (e) {
   if (!itsTavMobile && !itsTavToggleClosed && wrapperActive) {
     wrapper.classList.add('wrapper--closed');
     wrapper.classList.remove('wrapper--opened');
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+    wrapper.classList.remove('overlay');
   }
 });
 

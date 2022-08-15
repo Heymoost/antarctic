@@ -17,9 +17,9 @@
     <link rel="preload" href="/font/montserrat-bold.woff" type="font/woff2" crossorigin="anonymous" as="font">
   </head>
   <body>
-    <div class="wrapper wrapper--closed">
+    <div class="wrapper wrapper--closed wrapper-nav--nojs">
       <header>
-        <div class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav main-nav--closed">
           <div class="main-nav__container">
             <!-- 1х: 260px -->
             <a>
@@ -41,27 +41,7 @@
             </ul>
             <button class="main-nav__toggle-closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
-          <div class="main-nav__mobile">
-            <!-- 1х: 260px -->
-            <a>
-              <img src="img/svg/logo-menu.svg" width="42" height="22" alt="Логотип сайта 'Круизы в антарктику'.">
-            </a>
-            <ul class="main-nav__mobile-list">
-              <li>
-                <a class="main-nav__mobile-advantages" href="#advantages">Преимущества</a>
-              </li>
-              <li>
-                <a class="main-nav__mobile-booking" href="#booking">Направления</a>
-              </li>
-              <li>
-                <a class="main-nav__mobile-cruises" href="#cruises">Ближайшие круизы</a>
-              </li>
-              <li>
-                <a class="main-nav__mobile-contacts" href="#contacts">Контакты</a>
-              </li>
-            </ul>
-          </div>
-          <button class="main-nav__toggle-opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
+
           <div>
             <h1>Круизы в&nbsp;Антарктику</h1>
             <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
@@ -396,6 +376,27 @@
           </div>
         </div>
       </footer>
+      <div class="wrapper-nav__mobile">
+        <!-- 1х: 260px -->
+        <a>
+          <img src="img/svg/logo-menu.svg" width="42" height="22" alt="Логотип сайта 'Круизы в антарктику'.">
+        </a>
+        <ul class="wrapper-nav__mobile-list">
+          <li>
+            <a class="wrapper-nav__mobile-advantages" href="#advantages">Преимущества</a>
+          </li>
+          <li>
+            <a class="wrapper-nav__mobile-booking" href="#booking">Направления</a>
+          </li>
+          <li>
+            <a class="wrapper-nav__mobile-cruises" href="#cruises">Ближайшие круизы</a>
+          </li>
+          <li>
+            <a class="wrapper-nav__mobile-contacts" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <button class="wrapper-nav__toggle-opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
     <script src="js/main.min.js"></script>
   </body>

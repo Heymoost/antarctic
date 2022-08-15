@@ -54,6 +54,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0 auto;
 }
 
@@ -194,6 +195,7 @@ button,
   background: #011c40;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 1;
 }
 
 .main-nav__container {
@@ -237,33 +239,6 @@ button,
   color: #f9fbfd;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
-}
-
-.main-nav--closed .main-nav__mobile {
-  display: none;
-}
-
-.main-nav--closed .main-nav__toggle-opened {
-  display: none;
-}
-
-.main-nav__mobile-list {
-  padding: 42px 0 0 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.main-nav__mobile-list li {
-  padding: 0 0 26px 25px;
-  color: #011c40;
-}
-
-.main-nav__mobile-list a {
-  color: #011c40;
-  font-weight: 500;
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 22px;
 }
 
 .main-nav div {
@@ -371,7 +346,6 @@ button,
 }
 
 .advantages li {
-  position: relative;
   background-color: #f9fbfd;
 }
 
@@ -426,7 +400,6 @@ button,
 
 .cruises li {
   position: relative;
-  width: 260px;
   height: 386px;
   margin-bottom: 30px;
   -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
@@ -450,17 +423,36 @@ button,
 
 .cruises div {
   position: absolute;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
   width: 100%;
   height: 100%;
   opacity: 0;
   background-color: #011c40;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .cruises dl {
   margin: 0;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
 }
 
 .cruises dt {
@@ -484,8 +476,9 @@ button,
 }
 
 .cruises button {
-  position: absolute;
-  bottom: 25px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   color: #011c40;
   font-weight: 600;
   font-size: 14px;
@@ -594,6 +587,57 @@ button,
 
 .wrapper--opened {
   position: fixed;
+}
+
+.wrapper-nav__mobile {
+  z-index: 3;
+}
+
+.wrapper--closed .wrapper-nav__mobile {
+  display: none;
+}
+
+.wrapper-nav__mobile img {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.wrapper-nav__mobile-list {
+  padding: 42px 0 0 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.wrapper-nav__mobile-list li {
+  padding: 0 0 26px 25px;
+  color: #011c40;
+}
+
+.wrapper-nav__mobile-list a {
+  color: #011c40;
+  font-weight: 500;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.wrapper-nav__toggle-opened {
+  z-index: 4;
+}
+
+.wrapper--closed .wrapper-nav__toggle-opened {
+  display: none;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 43, 102, 0.5);
+  z-index: 2;
 }
 
 .social__facebook-svg a {
@@ -736,72 +780,7 @@ form span {
     box-shadow: 0 6px 0 0 #f9fbfd, 0 12px 0 0 #f9fbfd;
   }
 
-  .main-nav--opened .main-nav__mobile {
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 0;
-    width: 285px;
-    height: 568px;
-    background-color: #f9fbfd;
-    -webkit-box-shadow: -60px -20px 40px -7px rgba(0, 43, 102, 0.5);
-    box-shadow: -60px -20px 40px -7px rgba(0, 43, 102, 0.5);
-  }
-
-  .main-nav--opened .main-nav__toggle-opened {
-    position: absolute;
-    top: 23px;
-    right: 15px;
-    display: block;
-    padding: 0;
-    width: 13px;
-    height: 13px;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-  }
-
-  .main-nav--opened .main-nav__toggle-opened::before,
-  .main-nav--opened .main-nav__toggle-opened::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 13px;
-    height: 2px;
-    background-color: #000000;
-  }
-
-  .main-nav--opened .main-nav__toggle-opened::before {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .main-nav--opened .main-nav__toggle-opened::after {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-
-  .main-nav--opened .main-nav__toggle-opened:active::before,
-  .main-nav--opened .main-nav__toggle-opened:active::after {
-    background-color: fade(#000000, 30%);
-  }
-
-  .main-nav--nojs {
-    margin-top: 568px;
-  }
-
-  .main-nav--nojs .main-nav__mobile {
-    display: block;
-    position: absolute;
-    top: -568px;
-  }
-
-  .main-nav--nojs .main-nav__toggle-closed {
+  .wrapper-nav--nojs .main-nav__toggle-closed {
     display: none;
   }
 
@@ -875,6 +854,7 @@ form span {
   }
 
   .advantages li {
+    position: relative;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 22px 24px 20px;
@@ -926,6 +906,7 @@ form span {
   }
 
   .cruises li {
+    width: 270px;
     margin-right: 0;
   }
 
@@ -941,7 +922,7 @@ form span {
   }
 
   .cruises div {
-    padding: 68px 25px 0 25px;
+    padding: 68px 25px 30px 25px;
   }
 
   .cruises div:hover h3 {
@@ -951,7 +932,6 @@ form span {
 
   .cruises button {
     padding: 9px 52px;
-    margin-bottom: 11px;
   }
 
   .booking {
@@ -1007,6 +987,76 @@ form span {
 
   .contacts p {
     padding-bottom: 18px;
+  }
+
+  .wrapper--opened .wrapper-nav__mobile {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: calc(100% - 35px);
+    height: 100%;
+    background-color: #f9fbfd;
+    overflow-y: auto;
+  }
+
+  .wrapper-nav__mobile img {
+    width: 42px;
+    height: 22px;
+    padding: 20px 0 0 15px;
+  }
+
+  .wrapper-nav--nojs .wrapper-nav__mobile {
+    display: block;
+    position: absolute;
+    top: -568px;
+  }
+
+  .wrapper-nav--nojs {
+    margin-top: 568px;
+  }
+
+  .wrapper--opened .wrapper-nav__toggle-opened {
+    position: absolute;
+    top: 23px;
+    right: 15px;
+    display: block;
+    padding: 0;
+    width: 13px;
+    height: 13px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+
+  .wrapper--opened .wrapper-nav__toggle-opened::before,
+  .wrapper--opened .wrapper-nav__toggle-opened::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 13px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  .wrapper--opened .wrapper-nav__toggle-opened::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .wrapper--opened .wrapper-nav__toggle-opened::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .wrapper--opened .wrapper-nav__toggle-opened:active::before,
+  .wrapper--opened .wrapper-nav__toggle-opened:active::after {
+    background-color: fade(#000000, 30%);
   }
 
   .social__facebook-svg {
@@ -1109,23 +1159,7 @@ form span {
     display: none;
   }
 
-  .main-nav--opened .main-nav__mobile {
-    display: none;
-  }
-
   .main-nav--opened .main-nav__toggle-closed {
-    display: none;
-  }
-
-  .main-nav--opened .main-nav__toggle-opened {
-    display: none;
-  }
-
-  .main-nav--nojs {
-    margin-top: 0;
-  }
-
-  .main-nav--nojs .main-nav__mobile {
     display: none;
   }
 
@@ -1268,6 +1302,7 @@ form span {
   }
 
   .cruises li {
+    width: 309px;
     margin-right: 30px;
   }
 
@@ -1283,7 +1318,7 @@ form span {
   }
 
   .cruises div {
-    padding: 68px 35px 0 35px;
+    padding: 68px 35px 30px 35px;
   }
 
   .cruises div:hover h3 {
@@ -1293,7 +1328,6 @@ form span {
 
   .cruises button {
     padding: 9px 62px;
-    margin-bottom: 11px;
   }
 
   .booking {
@@ -1360,6 +1394,28 @@ form span {
 
   .contacts a {
     padding-bottom: 5px;
+  }
+
+  .wrapper--opened .wrapper-nav__mobile {
+    display: none;
+  }
+
+  .wrapper-nav__mobile img {
+    width: 38px;
+    height: 20px;
+    padding: 30px 0 0 45px;
+  }
+
+  .wrapper-nav--nojs .wrapper-nav__mobile {
+    display: none;
+  }
+
+  .wrapper-nav--nojs {
+    margin-top: 0;
+  }
+
+  .wrapper--opened .wrapper-nav__toggle-opened {
+    display: none;
   }
 
   .social__facebook-svg {
@@ -1469,23 +1525,7 @@ form span {
     display: none;
   }
 
-  .main-nav--opened .main-nav__mobile {
-    display: none;
-  }
-
   .main-nav--opened .main-nav__toggle-closed {
-    display: none;
-  }
-
-  .main-nav--opened .main-nav__toggle-opened {
-    display: none;
-  }
-
-  .main-nav--nojs {
-    margin-top: 0;
-  }
-
-  .main-nav--nojs .main-nav__mobile {
     display: none;
   }
 
@@ -1632,6 +1672,10 @@ form span {
     line-height: 150%;
   }
 
+  .cruises li {
+    width: 260px;
+  }
+
   .cruises img {
     width: 100%;
     height: 386px;
@@ -1644,7 +1688,7 @@ form span {
   }
 
   .cruises div {
-    padding: 68px 25px 0 15px;
+    padding: 68px 25px 30px 15px;
   }
 
   .cruises div:hover h3 {
@@ -1654,7 +1698,6 @@ form span {
 
   .cruises button {
     padding: 9px 47px;
-    margin-bottom: 11px;
   }
 
   .booking {
@@ -1734,6 +1777,28 @@ form span {
 
   .contacts a {
     padding-bottom: 10px;
+  }
+
+  .wrapper--opened .wrapper-nav__mobile {
+    display: none;
+  }
+
+  .wrapper-nav__mobile img {
+    width: 70px;
+    height: 38px;
+    padding: 35px 0 0 0;
+  }
+
+  .wrapper-nav--nojs .wrapper-nav__mobile {
+    display: none;
+  }
+
+  .wrapper-nav--nojs {
+    margin-top: 0;
+  }
+
+  .wrapper--opened .wrapper-nav__toggle-opened {
+    display: none;
   }
 
   .social__facebook-svg {
@@ -1825,7 +1890,7 @@ form span {
   }
 
   .cruises div {
-    padding: 68px 25px 0 25px;
+    padding: 68px 25px 30px 25px;
   }
 
   .cruises div:hover h3 {

@@ -61,18 +61,23 @@
 
 .cruises li {
   position: relative;
-  width: 260px;
+
   height: 386px;
   margin-bottom: 30px;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   background-color: #ffffff;
 
+  @media (min-width: $vp-1024) {
+    width: 260px;
+  }
 
   @media (min-width: $vp-768) {
+    width: 309px;
     margin-right: 30px;
   }
 
   @media (min-width: $vp-320) {
+    width: 270px;
     margin-right: 0;
   }
 }
@@ -131,32 +136,39 @@
 
 .cruises div {
   position: absolute;
-  box-sizing: border-box;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: stretch;
   width: 100%;
   height: 100%;
   opacity: 0;
   background-color: #011c40;
+  box-sizing: border-box;
+  overflow-y: auto;
+  flex: 1 1 auto;
 
   @media (min-width: $vp-1366) {
-    padding: 68px 25px 0 25px;
+    padding: 68px 25px 30px 25px;
   }
 
   @media (min-width: $vp-1024) {
-    padding: 68px 25px 0 15px;
+    padding: 68px 25px 30px 15px;
   }
 
   @media (min-width: $vp-768) {
-    padding: 68px 35px 0 35px;
+    padding: 68px 35px 30px 35px;
   }
 
   @media (min-width: $vp-320) {
-    padding: 68px 25px 0 25px;
+    padding: 68px 25px 30px 25px;
   }
 }
 
 .cruises dl {
   margin: 0;
+  flex-grow: 0;
 }
 
 .cruises dt {
@@ -202,8 +214,7 @@
 }
 
 .cruises button {
-  position: absolute;
-  bottom: 25px;
+  flex: 0 1 auto;
   color: #011c40;
   font-weight: 600;
   font-size: 14px;
@@ -214,19 +225,17 @@
   cursor: pointer;
   z-index: 10;
 
+
   @media (min-width: $vp-1024) {
     padding: 9px 47px;
-    margin-bottom: 11px;
   }
 
   @media (min-width: $vp-768) {
     padding: 9px 62px;
-    margin-bottom: 11px;
   }
 
   @media (min-width: $vp-320) {
     padding: 9px 52px;
-    margin-bottom: 11px;
   }
 }
 
