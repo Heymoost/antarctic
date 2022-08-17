@@ -120,5 +120,14 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  color: #011c40;
+  background: #f9fbfd;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "Montserrat", "Arial", sans-serif;
+  background-color: #f9fbfd;
+  border: none;
+  cursor: pointer;
   appearance: none;
 }

@@ -78,6 +78,10 @@
   line-height: 22px;
 }
 
+.wrapper-nav__mobile-list a:hover {
+  color: #7cbcfd;
+}
+
 .wrapper-nav--nojs .wrapper-nav__mobile {
   @media (min-width: $vp-1024) {
     display: none;
@@ -161,6 +165,33 @@
     &:active::after {
       background-color: fade(#000000, 30%);
     }
+  }
+}
+
+.wrapper--opened .wrapper-nav__toggle-opened:hover {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 13px;
+    height: 2px;
+    background-color: #7cbcfd;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#7cbcfd, 30%);
   }
 }
 

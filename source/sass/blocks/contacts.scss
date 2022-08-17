@@ -1,5 +1,5 @@
 .contacts {
-  align-items: center;
+  position: relative;
   box-sizing: content-box;
 
   @media (min-width: $vp-1024) {
@@ -56,10 +56,17 @@
   @media (min-width: $vp-1024) {
     max-width: 500px;
     padding-left: 30px;
+    margin: auto 0;
   }
 
   @media (min-width: $vp-768) {
     padding-left: 30px;
+    margin: auto 0;
+  }
+
+  @media (min-width: $vp-320) {
+    padding-left: 0;
+    margin: 0;
   }
 }
 
@@ -128,4 +135,8 @@
   @media (min-width: $vp-768) {
     padding-bottom: 5px;
   }
+}
+
+.contacts a:hover {
+  color: #7cbcfd;
 }

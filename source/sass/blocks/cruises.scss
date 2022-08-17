@@ -65,6 +65,7 @@
   margin-bottom: 30px;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   background-color: #ffffff;
+  user-select: text;
 
   @media (min-width: $vp-1024) {
     width: 260px;
@@ -220,7 +221,10 @@
 }
 
 .cruises div:hover h3 {
+  height: 13px;
+
   @media (min-width: $vp-1366) {
+    position: absolute;
     top: 30px;
     left: 25px;
   }
@@ -265,14 +269,6 @@
 
 .cruises button {
   flex: 0 1 auto;
-  color: #011c40;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 150%;
-  font-family: "Montserrat", "Arial", sans-serif;
-  border: none;
-  background-color: #f9fbfd;
-  cursor: pointer;
   z-index: 10;
 
   @media (min-width: $vp-1024) {
@@ -286,6 +282,11 @@
   @media (min-width: $vp-320) {
     padding: 9px 52px;
   }
+}
+
+.cruises button:hover {
+  color: #f9fbfd;
+  background-color: #7cbcfd;
 }
 
 .cruises div:hover {

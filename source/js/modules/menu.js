@@ -92,6 +92,7 @@ advantages.addEventListener('click', function () {
   wrapper.classList.remove('wrapper--opened');
   navMain.classList.add('main-nav--closed');
   navMain.classList.remove('main-nav--opened');
+  wrapper.classList.remove('overlay');
 });
 
 booking.addEventListener('click', function () {
@@ -99,6 +100,7 @@ booking.addEventListener('click', function () {
   wrapper.classList.remove('wrapper--opened');
   navMain.classList.add('main-nav--closed');
   navMain.classList.remove('main-nav--opened');
+  wrapper.classList.remove('overlay');
 });
 
 cruises.addEventListener('click', function () {
@@ -106,6 +108,7 @@ cruises.addEventListener('click', function () {
   wrapper.classList.remove('wrapper--opened');
   navMain.classList.add('main-nav--closed');
   navMain.classList.remove('main-nav--opened');
+  wrapper.classList.remove('overlay');
 });
 
 contacts.addEventListener('click', function () {
@@ -113,4 +116,5 @@ contacts.addEventListener('click', function () {
   wrapper.classList.remove('wrapper--opened');
   navMain.classList.add('main-nav--closed');
   navMain.classList.remove('main-nav--opened');
+  wrapper.classList.remove('overlay');
 });
