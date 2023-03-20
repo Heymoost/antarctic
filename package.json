@@ -1,7 +1,7 @@
 {
-  "name": "Liga-A-start-template",
+  "name": "Antarctic",
   "version": "2.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "homepage": "https://heymoost.github.io/antarctic",
   "browserslist": [
     "last 3 versions",
     "IE 11",
